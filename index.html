@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <style>
+        :root {
+            --primary-red: #d90429;
+            --accent-red: #ef233c;
+            --light-red-bg: #fff0f3;
+            --dot-color: #ffccd5;
+            --text-dark: #2b2d42;
+            --text-muted: #6c757d;
+            --white: #ffffff;
+        }
+
+        /* Base Reset & Polka-Dot Background */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--white);
+            background-image: radial-gradient(var(--dot-color) 15%, transparent 16%), 
+                              radial-gradient(var(--dot-color) 15%, transparent 16%);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--white);
+            border: 2px solid var(--accent-red);
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(217, 4, 41, 0.08);
+            overflow: hidden;
+            padding: 40px;
+        }
+
+        /* Header / Hero Section */
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--light-red-bg);
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+
+        .profile-pic-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+            border: 4px solid var(--accent-red);
+            overflow: hidden;
+            background-color: var(--light-red-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-red);
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            margin: 0 0 5px 0;
+            color: var(--primary-red);
+            font-size: 28px;
+        }
+
+        .title {
+            color: var(--text-muted);
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .contact-info span {
+            margin: 0 10px;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            color: var(--primary-red);
+            font-size: 20px;
+            border-bottom: 2px solid var(--light-red-bg);
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p {
+            margin: 0;
+            color: #495057;
+            font-size: 15px;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+        }
+
+        .skill-item {
+            background-color: var(--light-red-bg);
+            border-left: 4px solid var(--accent-red);
+            padding: 12px 15px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+
+        /* Projects List */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .project-card {
+            background: var(--white);
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(217, 4, 41, 0.1);
+            border-color: var(--accent-red);
+        }
+
+        .project-title {
+            font-size: 17px;
+            font-weight: bold;
+            color: var(--primary-red);
+            margin-bottom: 5px;
+        }
+
+        .project-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .project-tags {
+            font-size: 12px;
+            background: var(--light-red-bg);
+            color: var(--accent-red);
+            padding: 4px 10px;
+            border-radius: 12px;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header & Profile Picture -->
+        <header>
+            <div class="profile-pic-container">
+                <!-- Replace src with your image URL, or fallback text will show if broken -->
+                <img src="" alt="Profile Picture" class="profile-pic" onerror="this.style.display='none';">
+                <span style="position: absolute;">Photo</span>
+            </div>
+            <h1>Alexandra Smith</h1>
+            <div class="title">Senior Business Analyst & Strategist</div>
+            <div class="contact-info">
+                <span>alexandra@example.com</span> | 
+                <span>+1 (555) 019-2834</span> | 
+                <span>New York, NY</span>
+            </div>
+        </header>
+
+        <!-- About Me Section -->
+        <section>
+            <h2>About Me</h2>
+            <p>
+                Results-driven professional with over 8 years of experience in enterprise strategy, market research, and process optimization. Adept at translating complex data into actionable business roadmaps that drive growth, enhance efficiency, and maximize profitability. Passionate about modern enterprise solutions and cross-functional team leadership.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section>
+            <h2>Core Competencies & Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Strategic Planning</div>
+                <div class="skill-item">Data Analytics & Reporting</div>
+                <div class="skill-item">Project Management (Agile)</div>
+                <div class="skill-item">Financial Modeling</div>
+                <div class="skill-item">Process Optimization</div>
+                <div class="skill-item">Stakeholder Management</div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section>
+            <h2>Key Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title">Enterprise Cost Reduction Initiative</div>
+                    <div class="project-desc">Led a comprehensive operational review across three regional departments, cutting overhead costs by 18% within two quarters while retaining key personnel and maintaining output quality.</div>
+                    <span class="project-tags">Operations & Strategy</span>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Market Expansion Roadmap</div>
+                    <div class="project-desc">Authored a 3-year market penetration strategy for a mid-sized tech firm entering European markets, identifying optimal acquisition targets and regulatory hurdles.</div>
+                    <span class="project-tags">Market Research</span>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Automated Analytics Dashboard</div>
+                    <div class="project-desc">Collaborated with engineering teams to deploy an executive business intelligence suite, reducing manual reporting hours by 40% per week.</div>
+                    <span class="project-tags">Business Intelligence</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
